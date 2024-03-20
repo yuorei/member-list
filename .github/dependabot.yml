@@ -1,0 +1,17 @@
+version: 2
+updates:
+  # Goモジュールの依存関係のアップデートを監視
+  - package-ecosystem: "gomod"
+    directory: "/back"
+    schedule:
+      interval: "daily"
+    assignees:
+      - yuorei
+
+  # GitHub Actionsワークフローの依存関係のアップデートを監視
+  - package-ecosystem: "github-actions"
+    directory: "/.github/workflows"
+    schedule:
+      interval: "daily"
+    assignees:
+      - yuorei
